@@ -171,6 +171,8 @@ $hover-color: #d1cbcb;
             list-style: none;
             width: 100%;
             padding-inline-start: 0px;
+            margin-block-start: 0px;
+            margin-block-end: 0px;
             display: none;
         }
         ul a {
@@ -199,8 +201,12 @@ $hover-color: #d1cbcb;
             right: 8px;
         }
 
-        .menu:active ~ ul {
+        .menu:hover ~ ul {
             display: block;
+        }
+
+        ul:hover ~ ul {
+            display: block
         }
     }
     .nav-decor {

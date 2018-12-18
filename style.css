@@ -151,6 +151,10 @@
       width: 100%;
       -webkit-padding-start: 0px;
       padding-inline-start: 0px;
+      -webkit-margin-before: 0px;
+      margin-block-start: 0px;
+      -webkit-margin-after: 0px;
+      margin-block-end: 0px;
       display: none; }
     .grey ul a {
       color: black;
@@ -173,7 +177,9 @@
       position: absolute;
       top: 58px;
       right: 8px; }
-    .grey .menu:active ~ ul {
+    .grey .menu:hover ~ ul {
+      display: block; }
+    .grey ul:hover ~ ul {
       display: block; }
   .nav-decor {
     border-top: 1px solid black;
