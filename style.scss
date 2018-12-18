@@ -17,9 +17,6 @@ $hover-color: #d1cbcb;
         width: 100%;
         background-color: $grey-color;
     }
-    .menu {
-        visibility: hidden;
-    }
     .grey {
         ul {
             display: inline-block;
@@ -87,9 +84,6 @@ $hover-color: #d1cbcb;
         width: 100%;
         background-color: $red-color;
         height: 100px;
-    }
-    .menu {
-        visibility: hidden;
     }
     .grey {
         background-color: $grey-color;
@@ -168,6 +162,10 @@ $hover-color: #d1cbcb;
             margin-block-end: 0px;
             transition: 5s;
             display: none;
+            visibility: hidden;
+            animation-fill-mode: backwards;
+            animation: 1s ease 2s forwards delayedShow;
+            animation-iteration-count: 1;
         }
         .menu ul a {
             color: black;
@@ -175,7 +173,6 @@ $hover-color: #d1cbcb;
         }
         .menu ul li:hover {
             background-color: $hover-color;
-            opacity: 8;
         }
         .menu ul li {
             width: 97%;
@@ -184,6 +181,7 @@ $hover-color: #d1cbcb;
             color: white;
             padding: 5px;
             padding-top: 34px;
+            visibility: hidden;
         }
         .menu-button {
             background-color: #ffffff;
@@ -198,12 +196,23 @@ $hover-color: #d1cbcb;
         }
         .menu:hover ul {
             display: block;
-            
+            visibility: visible;
         }
+        .menu:hover ~ .menu-list ul li {
+            animation: 0.1s ease 0.1s forwards delayedShow;
+        } 
         .menu:hover .menu-button {
             background-color: $hover-color;
             opacity: .8;
         }
+    }
+    @keyframes delayedShow {
+        to {
+            visibility: visible;
+        }
+    }
+    .menu ul li {
+        animation: 0.1s ease 0.1s forwards delayedShow;
     }
     .nav-decor {
         border-top: 1px solid black;
