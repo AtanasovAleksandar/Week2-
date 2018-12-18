@@ -145,7 +145,7 @@
   .grey {
     width: 100%;
     background-color: #948686; }
-    .grey ul {
+    .grey .menu ul {
       display: inline-block;
       list-style: none;
       width: 100%;
@@ -156,30 +156,27 @@
       -webkit-margin-after: 0px;
       margin-block-end: 0px;
       display: none; }
-    .grey ul a {
+    .grey .menu ul a {
       color: black;
       text-decoration: none; }
-    .grey ul li:hover {
+    .grey .menu ul li:hover {
       background-color: #d1cbcb;
       opacity: 8; }
-    .grey ul li {
+    .grey .menu ul li {
       width: 97%;
       height: 40px;
       text-align: center;
       color: white;
       padding: 5px;
       padding-top: 34px; }
-    .grey .menu {
-      visibility: visible;
+    .grey .menu-button {
       background-color: #ffffff;
       width: 50px;
       height: 50px;
       position: absolute;
       top: 58px;
       right: 8px; }
-    .grey .menu:hover ~ ul {
-      display: block; }
-    .grey ul:hover ~ ul {
+    .grey .menu:hover ul {
       display: block; }
   .nav-decor {
     border-top: 1px solid black;
